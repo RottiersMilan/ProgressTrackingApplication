@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+/* Reset alle standaard browser-styling */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basisinstellingen */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  font-family: inherit;
+}
+
+/* Verwijder standaard lijst-styling */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Verwijder standaard link-styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Form elements */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Afbeeldingen */
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a, p{
+    color: #171614;
+}
+
+body{
+    background-color: white;
+}
+
+//kleuren: zwart:171614 bruin:3A2618 rood achtig:754043 sand:9A8873 groen:37423D
