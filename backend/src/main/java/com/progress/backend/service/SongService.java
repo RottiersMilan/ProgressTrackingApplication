@@ -55,4 +55,8 @@ public class SongService {
 
         return convertToDTO(savedSong);
     }
+
+    public void deleteSong(Long id) {
+        songRepository.deleteById(id);
+    }
 }

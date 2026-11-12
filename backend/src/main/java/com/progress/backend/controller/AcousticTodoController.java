@@ -19,13 +19,11 @@ public class AcousticTodoController {
         this.acousticTodoService = acousticTodoService;
     }
 
-    // Alle todos ophalen
     @GetMapping
     public List<TodoAcousticResponseDTO> getAllTodos() {
         return acousticTodoService.getAllTodos();
     }
 
-    // Song toevoegen
     @PostMapping
     public TodoAcousticResponseDTO createTodo(
             @RequestBody TodoAcousticRequestDTO dto) {
@@ -33,7 +31,6 @@ public class AcousticTodoController {
         return acousticTodoService.createTodo(dto);
     }
 
-    // Todo verwijderen
     @DeleteMapping("/{id}")
     public void deleteTodo(@PathVariable Long id) {
         acousticTodoService.deleteTodo(id);

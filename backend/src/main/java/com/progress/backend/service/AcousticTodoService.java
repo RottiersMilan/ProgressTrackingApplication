@@ -25,7 +25,6 @@ public class AcousticTodoService {
         this.songRepository = songRepository;
     }
 
-    // Entity omzetten naar DTO
     private TodoAcousticResponseDTO convertToDTO(AcousticTodo todo) {
 
         Song song = todo.getSong();
@@ -40,7 +39,6 @@ public class AcousticTodoService {
         );
     }
 
-    // Alle acoustic todos ophalen
     public List<TodoAcousticResponseDTO> getAllTodos() {
 
         return acousticTodoRepository.findAll()
@@ -49,7 +47,6 @@ public class AcousticTodoService {
                 .toList();
     }
 
-    // Song toevoegen aan acoustic todo
     public TodoAcousticResponseDTO createTodo(TodoAcousticRequestDTO dto) {
 
         Song song = songRepository.findById(dto.getSongId())
@@ -62,7 +59,6 @@ public class AcousticTodoService {
         return convertToDTO(savedTodo);
     }
 
-    // Todo verwijderen
     public void deleteTodo(Long id) {
         acousticTodoRepository.deleteById(id);
     }
