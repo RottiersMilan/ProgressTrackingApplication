@@ -3,14 +3,12 @@ export interface SongResponse {
   title: string;
   artist: string;
   link: string;
-  genre: string;
 }
 
 export interface SongRequest {
   title: string;
   artist: string;
   link: string;
-  genre: string;
 }
 
 export interface AcousticTodoRequest {
@@ -23,5 +21,4 @@ export interface AcousticTodoResponse {
   title: string;
   artist: string;
   link: string;
-  genre: string;
 }

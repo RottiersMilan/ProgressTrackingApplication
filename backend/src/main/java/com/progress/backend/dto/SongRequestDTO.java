@@ -5,7 +5,6 @@ public class SongRequestDTO {
     private String title;
     private String artist;
     private String link;
-    private String genre;
 
     public String getTitle() {
         return title;
@@ -19,10 +18,6 @@ public class SongRequestDTO {
         return link;
     }
 
-    public String getGenre() {
-        return genre;
-    }
-
     public void setTitle(String title) {
         this.title = title;
     }
@@ -33,9 +28,5 @@ public class SongRequestDTO {
 
     public void setLink(String link) {
         this.link = link;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
     }
 }

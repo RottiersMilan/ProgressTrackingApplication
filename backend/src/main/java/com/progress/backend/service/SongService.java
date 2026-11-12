@@ -23,8 +23,7 @@ public class SongService {
             song.getId(),
             song.getTitle(),
             song.getArtist(),
-            song.getLink(),
-            song.getGenre()
+            song.getLink()
         );
     }
 
@@ -47,8 +46,7 @@ public class SongService {
         Song song = new Song(
             dto.getTitle(),
             dto.getArtist(),
-            dto.getLink(),
-            dto.getGenre()
+            dto.getLink()
         );
 
         Song savedSong = songRepository.save(song);

@@ -16,12 +16,10 @@ export class AcousticTodoService {
 
   constructor(private http: HttpClient) {}
 
-  // Alle acoustic todos ophalen
   getAllTodos(): Observable<AcousticTodoResponse[]> {
     return this.http.get<AcousticTodoResponse[]>(this.apiUrl);
   }
 
-  // Song toevoegen aan acoustic todo
   addTodo(songId: number): Observable<AcousticTodoResponse> {
 
     const request: AcousticTodoRequest = {
@@ -34,7 +32,6 @@ export class AcousticTodoService {
     );
   }
 
-  // Todo verwijderen
   deleteTodo(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }

@@ -15,15 +15,13 @@ public class Song {
     private String title;
     private String artist;
     private String link;
-    private String genre;
 
     public Song() {}
 
-    public Song(String title, String artist, String link, String genre) {
+    public Song(String title, String artist, String link) {
         this.title = title;
         this.artist = artist;
         this.link = link;
-        this.genre = genre;
     }
 
     // Getters
@@ -43,10 +41,6 @@ public class Song {
         return link;
     }
 
-    public String getGenre() {
-        return genre;
-    }
-
     // Setters
     public void setId(Long id) {
         this.id = id;
@@ -62,9 +56,5 @@ public class Song {
 
     public void setLink(String link) {
         this.link = link;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
     }
 }

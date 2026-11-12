@@ -6,15 +6,13 @@ public class SongResponseDTO {
     private String title;
     private String artist;
     private String link;
-    private String genre;
 
     public SongResponseDTO(Long id, String title, String artist,
-                           String link, String genre) {
+                           String link) {
         this.id = id;
         this.title = title;
         this.artist = artist;
         this.link = link;
-        this.genre = genre;
     }
 
     public Long getId() {
@@ -31,9 +29,5 @@ public class SongResponseDTO {
 
     public String getLink() {
         return link;
-    }
-
-    public String getGenre() {
-        return genre;
     }
 }

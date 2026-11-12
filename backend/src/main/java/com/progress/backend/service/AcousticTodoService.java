@@ -34,8 +34,7 @@ public class AcousticTodoService {
             song.getId(),
             song.getTitle(),
             song.getArtist(),
-            song.getLink(),
-            song.getGenre()
+            song.getLink()
         );
     }
 

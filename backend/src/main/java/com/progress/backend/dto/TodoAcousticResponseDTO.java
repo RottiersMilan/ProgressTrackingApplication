@@ -7,16 +7,14 @@ public class TodoAcousticResponseDTO {
     private String title;
     private String artist;
     private String link;
-    private String genre;
 
     public TodoAcousticResponseDTO(Long id, Long songId,
-            String title, String artist, String link, String genre) {
+            String title, String artist, String link) {
         this.id = id;
         this.songId = songId;
         this.title = title;
         this.artist = artist;
         this.link = link;
-        this.genre = genre;
     }
 
     public Long getId() {
@@ -37,9 +35,5 @@ public class TodoAcousticResponseDTO {
 
     public String getLink() {
         return link;
-    }
-
-    public String getGenre() {
-        return genre;
     }
 }
