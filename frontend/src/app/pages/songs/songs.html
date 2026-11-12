@@ -1,1 +1,7 @@
-<p>songs works!</p>
+@for (song of songs; track song.id) {
+  <div>
+    <h3>{{ song.title }}</h3>
+    <p>{{ song.artist }}</p>
+    <a [href]="song.link" target="_blank">Listen</a>
+  </div>
+}
