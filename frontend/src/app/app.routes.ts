@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { HomePage } from './home-page/home-page';
-import { TodoAcoustic } from './todo-acoustic/todo-acoustic';
-import { FinishedAcoustic } from './finished-acoustic/finished-acoustic';
-import { TodoElectric } from './todo-electric/todo-electric';
-import { FinishedElectric } from './finished-electric/finished-electric';
+import { HomePage } from './pages/home-page/home-page';
+import { TodoAcoustic } from './pages/todo-acoustic/todo-acoustic';
+import { FinishedAcoustic } from './pages/finished-acoustic/finished-acoustic';
+import { TodoElectric } from './pages/todo-electric/todo-electric';
+import { FinishedElectric } from './pages/finished-electric/finished-electric';
 
 export const routes: Routes = [
   { path: '', component: HomePage },
