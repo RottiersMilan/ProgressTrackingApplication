@@ -1,7 +1,10 @@
-@for (song of songs; track song.id) {
-  <div>
-    <h3>{{ song.title }}</h3>
-    <p>{{ song.artist }}</p>
-    <a [href]="song.link" target="_blank">Listen</a>
-  </div>
-}
+
+<div class="SongContainer">
+  @for (song of songs; track song.id) {
+    <div class="Card">
+      <h3>{{ song.title }}</h3>
+      <p>{{ song.artist }}</p>
+      <a [href]="song.link" target="_blank">Listen</a>
+    </div>
+  }
+</div>
