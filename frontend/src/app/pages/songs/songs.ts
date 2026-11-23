@@ -12,16 +12,16 @@ export class Songs implements OnInit {
 
   songs: SongResponse[] = [];
 
-  constructor(private songService: SongService) {}
+  constructor(private songService: SongService) { }
 
   ngOnInit(): void {
+    console.log('Songs component geladen');
     this.songService.getAllSongs().subscribe({
       next: (data) => {
+        console.log('Data ontvangen:', data);
         this.songs = data;
       },
-      error: (error) => {
-        console.error('Error fetching songs:', error);
-      }
+      error: (error) => console.error('Error fetching songs:', error)
     });
   }
 }
