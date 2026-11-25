@@ -15,11 +15,14 @@ public class AcousticTodo {
 
     @ManyToOne
     private Song song;
+    
+    private String link;
 
     public AcousticTodo() {}
 
-    public AcousticTodo(Song song) {
+    public AcousticTodo(Song song, String link) {
         this.song = song;
+        this.link = link;
     }
 
     // Getters
@@ -31,6 +34,10 @@ public class AcousticTodo {
         return song;
     }
 
+    public String getLink() {
+        return link;
+    }
+
     // Setters
     public void setId(Long id) {
         this.id = id;
@@ -38,5 +45,9 @@ public class AcousticTodo {
 
     public void setSong(Song song) {
         this.song = song;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
     }
 }

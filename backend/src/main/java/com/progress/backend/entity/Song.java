@@ -17,14 +17,12 @@ public class Song {
 
     private String title;
     private String artist;
-    private String link;
 
     public Song() {}
 
-    public Song(String title, String artist, String link) {
+    public Song(String title, String artist) {
         this.title = title;
         this.artist = artist;
-        this.link = link;
     }
 
     // Getters
@@ -40,10 +38,6 @@ public class Song {
         return artist;
     }
 
-    public String getLink() {
-        return link;
-    }
-
     // Setters
     public void setId(Long id) {
         this.id = id;
@@ -55,9 +49,5 @@ public class Song {
 
     public void setArtist(String artist) {
         this.artist = artist;
-    }
-
-    public void setLink(String link) {
-        this.link = link;
     }
 }

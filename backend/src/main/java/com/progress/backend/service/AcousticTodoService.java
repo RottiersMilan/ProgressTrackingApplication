@@ -34,7 +34,7 @@ public class AcousticTodoService {
             song.getId(),
             song.getTitle(),
             song.getArtist(),
-            song.getLink()
+            todo.getLink()
         );
     }
 
@@ -51,7 +51,7 @@ public class AcousticTodoService {
         Song song = songRepository.findById(dto.getSongId())
                 .orElseThrow(() -> new RuntimeException("Song not found"));
 
-        AcousticTodo todo = new AcousticTodo(song);
+        AcousticTodo todo = new AcousticTodo(song, dto.getLink());
 
         AcousticTodo savedTodo = acousticTodoRepository.save(todo);
 
