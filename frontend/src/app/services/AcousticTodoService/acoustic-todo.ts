@@ -23,7 +23,8 @@ export class AcousticTodoService {
   addTodo(songId: number): Observable<AcousticTodoResponse> {
 
     const request: AcousticTodoRequest = {
-      songId: songId
+      songId: songId,
+      link: ""
     };
 
     return this.http.post<AcousticTodoResponse>(
