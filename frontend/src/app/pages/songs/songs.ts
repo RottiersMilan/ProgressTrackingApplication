@@ -24,4 +24,11 @@ export class Songs implements OnInit {
       error: (error) => console.error('Error fetching songs:', error)
     });
   }
+
+  deleteSong(id: number) {
+  if (confirm('Ben je zeker dat je dit liedje wilt verwijderen?')) {
+    this.songService.deleteSong(id).subscribe();
+    this.songs = this.songs.filter(song => song.id !== id);
+  }
+}
 }

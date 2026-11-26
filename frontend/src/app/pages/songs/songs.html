@@ -10,6 +10,7 @@
 <div class="SongContainer">
   @for (song of songs; track song.id) {
     <div class="Card">
+      <button class="X" (click)="deleteSong(song.id)">X</button>
       <h3>{{ song.title }}</h3>
       <p>{{ song.artist }}</p>
     </div>
