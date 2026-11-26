@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AcousticTodo } from './acoustic-todo';
+import { AcousticTodoService } from './acoustic-todo';
 
 describe('AcousticTodo', () => {
-  let service: AcousticTodo;
+  let service: AcousticTodoService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(AcousticTodo);
+    service = TestBed.inject(AcousticTodoService);
   });
 
   it('should be created', () => {

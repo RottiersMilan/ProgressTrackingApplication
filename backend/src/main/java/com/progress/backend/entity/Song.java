@@ -18,11 +18,16 @@ public class Song {
     private String title;
     private String artist;
 
+    private boolean hasAcoustic;
+    private boolean hasElectric;
+
     public Song() {}
 
-    public Song(String title, String artist) {
+    public Song(String title, String artist, boolean hasAcoustic, boolean hasElectric) {
         this.title = title;
         this.artist = artist;
+        this.hasAcoustic = hasAcoustic;
+        this.hasElectric = hasElectric;
     }
 
     // Getters
@@ -38,6 +43,14 @@ public class Song {
         return artist;
     }
 
+    public boolean getHasAcoustic(){
+        return hasAcoustic;
+    }
+
+    public boolean getHasElectric(){
+        return hasElectric;
+    }
+
     // Setters
     public void setId(Long id) {
         this.id = id;
@@ -49,5 +62,13 @@ public class Song {
 
     public void setArtist(String artist) {
         this.artist = artist;
+    }
+
+    public void setHasAcoustic(boolean hasAcoustic){
+        this.hasAcoustic = hasAcoustic;
+    }
+
+    public void setHasElectric(boolean hasElectric){
+        this.hasElectric = hasElectric;
     }
 }

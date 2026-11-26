@@ -15,11 +15,13 @@ export class SongService {
       return this.http.get<SongResponse[]>(this.apiUrl);
     }
 
-  addSong(title: string, artist: string): Observable<SongResponse> {
+  addSong(title: string, artist: string, hasAcoustic: boolean, hasElectric: boolean): Observable<SongResponse> {
   
       const request: SongRequest = {
         title: title,
-        artist: artist
+        artist: artist,
+        hasAcoustic: hasAcoustic,
+        hasElectric: hasElectric
       };
   
       return this.http.post<SongResponse>(
