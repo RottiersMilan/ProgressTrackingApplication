@@ -1,3 +1,4 @@
+
 h1 {
     width: 100%;
     text-align: center;
@@ -49,6 +50,8 @@ h1 {
     transform: scale(1.05);
 }
 
+/* Add button */
+
 .AddSong {
     width: 4rem;
     height: 4rem;
@@ -70,11 +73,17 @@ h1 {
     transform: scale(1.05);
 }
 
-.AddSong > p {
+.AddSong button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
     color: white;
-    font-size: 3rem;
-    margin: 0;
+    font-size: 2.5rem;
+    cursor: pointer;
 }
+
+/* Delete button */
 
 .X {
     position: absolute;
@@ -98,4 +107,84 @@ h1 {
 
 .X:hover {
     color: gray;
+}
+
+/* Add Song form */
+
+.AddSongOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.AddSongForm {
+    width: 22rem;
+    max-width: calc(100% - 2rem);
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    box-sizing: border-box;
+    border-radius: 1rem;
+    background-color: #37423D;
+    color: white;
+
+    h2 {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    input {
+        padding: 0.7rem;
+        border: none;
+        border-radius: 0.4rem;
+    }
+}
+
+/* Form buttons */
+
+.FormButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    button {
+        width: 40%;
+        padding: 0.7rem;
+        border: none;
+        border-radius: 0.5rem;
+        color: white;
+        cursor: pointer;
+
+        transition: transform 0.1s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .AddButton {
+        background-color: #9A8873;
+    }
+
+    .CancelButton {
+        background-color: #754043;
+    }
+}
+
+/* Disable scrolling */
+
+:host(.no-scroll) {
+    overflow: hidden;
+    height: 100vh;
 }

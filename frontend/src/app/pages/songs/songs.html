@@ -1,26 +1,45 @@
-
 <h1>
   All Songs
 </h1>
 
 <div class="AddSong">
-  <p>+</p>
+  <button (click)="StartAdding()">+</button>
 </div>
 
 <div class="SongContainer">
   @for (song of songs; track song.id) {
-    <div class="Card">
-      <button class="X" (click)="deleteSong(song.id)">X</button>
-      <h3>{{ song.title }}</h3>
-      <p>{{ song.artist }}</p>
+  <div class="Card">
+    <button class="X" (click)="deleteSong(song.id)">X</button>
 
-      @if (song.hasAcoustic) {
-        <a>acoustic</a>
-      }
+    <h3>{{ song.title }}</h3>
+    <p>{{ song.artist }}</p>
 
-      @if (song.hasElectric) {
-        <a>electric</a>
-      }
-    </div>
+    @if (song.hasAcoustic) {
+    <a>acoustic</a>
+    }
+
+    @if (song.hasElectric) {
+    <a>electric</a>
+    }
+  </div>
   }
 </div>
+
+@if (IsAdding) {
+<div class="AddSongOverlay">
+  <div class="AddSongForm">
+    <h2>Add Song</h2>
+
+    <label for="title">Title</label>
+    <input id="title" type="text" [(ngModel)]="title" placeholder="Song title">
+
+    <label for="artist">Artist</label>
+    <input id="artist" type="text" [(ngModel)]="artist" placeholder="Artist name">
+
+    <div class="FormButtons">
+      <button class="AddButton" (click)="addSong()">Add Song</button>
+      <button class="CancelButton" (click)="IsAdding = false">Cancel</button>
+    </div>
+  </div>
+</div>
+}
