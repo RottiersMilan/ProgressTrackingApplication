@@ -77,6 +77,13 @@ h1{
 
 .X {
   position: absolute;
+  background-color: #37423D;
+  color: white;
+  border: none;
   top: .5rem;
   right: .5rem;
+}
+
+.X:hover{
+  color: gray;
 }
